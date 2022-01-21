@@ -1,0 +1,68 @@
+/* /Pages/Index.razor.rz.scp.css */
+#tabs[b-s7l3f1t67z] {
+    width: 50%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#layers[b-s7l3f1t67z] {
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+}
+/* /Pages/Layer.razor.rz.scp.css */
+.layer[b-94y1376qvt] {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+.display-text[b-94y1376qvt] {
+    position: relative;
+    margin: auto;
+    color: white;
+}
+/* /Pages/PointDisplay.razor.rz.scp.css */
+.pointsDisplay[b-jxihkmj9he] {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.pointsAmount[b-jxihkmj9he] {
+    font-family: "Lucida Console", "Courier New", monospace;
+    display: inline
+}
+
+.pointsText[b-jxihkmj9he] {
+    margin: auto;
+}
+/* /Pages/PrestigeButton.razor.rz.scp.css */
+.prestigeButton[b-id3gum0rla] {
+    border: 4px solid;
+    width: 200px;
+    height: 100px;
+    border-color: rgba(0, 0, 0, 0.125);
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+/* /Pages/Tab.razor.rz.scp.css */
+.tab[b-9t9taaov4h] {
+    height: 36px;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 10px;
+    color: white;
+    padding: 0 20px 0 20px;
+    margin: 0 8px 0 8px;
+}
+
+.tab:hover[b-9t9taaov4h] {
+    transform: scale(1.1, 1.1);
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
