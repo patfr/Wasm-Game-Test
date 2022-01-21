@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\Index.razor.css" />
+    <None Remove="Pages\Layer.razor.css" />
+    <None Remove="Pages\PointDisplay.razor.css" />
+    <None Remove="Pages\PrestigeButton.razor.css" />
+    <None Remove="Pages\Tab.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Index.razor.css" />
+    <Content Include="Pages\Layer.razor.css" />
+    <Content Include="Pages\PointDisplay.razor.css" />
+    <Content Include="Pages\PrestigeButton.razor.css" />
+    <Content Include="Pages\Tab.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.1" PrivateAssets="all" />
+    <PackageReference Include="NumberClass" Version="1.1.1" />
+  </ItemGroup>
+
+</Project>

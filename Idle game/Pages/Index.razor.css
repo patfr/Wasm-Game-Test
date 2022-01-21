@@ -1,0 +1,13 @@
+﻿#tabs {
+    width: 50%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#layers {
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+}

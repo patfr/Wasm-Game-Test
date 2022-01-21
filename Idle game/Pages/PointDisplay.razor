@@ -1,0 +1,23 @@
+﻿<div class="pointsDisplay">
+    <span class="pointsText" style="color: @color">You have</span>
+    <h2 class="pointsText pointsAmount" style="text-shadow: 0 0 10px @color; color: @color">@pText</h2>
+    <span class="pointsText" style="color: @color">@name</span>
+    <br />
+    <span class="pointsText" style="color: @color; display: @display">(@(sText)/sec)</span>
+</div>
+
+@code {
+    [Parameter] public string color { get; set; } = "#ffffff";
+    [Parameter] public string name { get; set; } = "Points";
+    [Parameter] public bool showPPS { get; set; } = true;
+
+    private string display => showPPS ? "initial" : "none";
+
+    public double points { get; set; } = 0;
+    public double pps { get; set; } = 0;
+
+    private string pText => (Math.Floor(points * 100d) / 100d).ToString("0.00");
+    private string sText => (Math.Floor(pps * 100d) / 100d).ToString("0.00");
+
+    public void Update() => this.StateHasChanged();
+}

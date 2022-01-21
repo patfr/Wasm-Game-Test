@@ -1,0 +1,11 @@
+﻿.layer {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+.display-text {
+    position: relative;
+    margin: auto;
+    color: white;
+}

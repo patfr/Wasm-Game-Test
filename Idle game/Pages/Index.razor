@@ -1,0 +1,79 @@
+﻿@page "/"
+
+<PageTitle>C# Test</PageTitle>
+
+<PointDisplay color="#ffffff" name="Points" @ref="Points" />
+
+<div id="tabs">
+    <Tab text="Data" layer="Data" />
+    <Tab text="Context" layer="Context" />
+</div>
+
+<div id="layers">
+    <Layer name="Data" shown=true @ref="layers[layerNames[0]]" />
+    <Layer name="Context" @ref="layers[layerNames[1]]" />
+</div>
+
+@code {
+    private static PointDisplay? Points;
+    private bool Initialized = false;
+
+    private static void Run(long time)
+    {
+        double t = time / 1000d;
+
+        Data.GainPoints(t);
+
+        if (Points != null)
+        {
+            Points.points = Data.Points;
+            Points.pps = Data.PPS;
+            Points.Update();
+        }
+
+        foreach (KeyValuePair<string, Layer> l in layers)
+        {
+            l.Value.Tick(t);
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        LastRun = GetTimeMs();
+
+        Timer = new System.Threading.Timer((e) =>
+        {
+            Run(DeltaTime);
+            LastRun = GetTimeMs();
+        }, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(15));
+        Initialized = true;
+    }
+
+    private static Dictionary<string, Layer> layers = new Dictionary<string, Layer>();
+
+    public static void OnTabClick(string layer)
+    {
+        foreach (KeyValuePair<string, Layer> l in layers)
+        {
+            if(string.Equals(l.Value.Name, layer))
+            {
+                l.Value.Shown = true;
+                l.Value.Update();
+            }
+            else
+            {
+                l.Value.Shown = false;
+                l.Value.Update();
+            }
+        }
+    }
+
+    public static long DeltaTime => GetTimeMs() - LastRun;
+
+    private static long GetTimeMs() => DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+    private static long LastRun { get; set; }
+
+    private static System.Threading.Timer? Timer;
+
+    private static string[] layerNames = new string[] { "Data", "Contex" };
+}

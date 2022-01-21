@@ -1,0 +1,25 @@
+﻿@code {
+    public static double Points = 0;
+    public static double PPS = 0;
+
+    public static void GainPoints(double time)
+    {
+        double amount = 0;
+
+        if (CanGainPoints())
+            amount = PointGain();
+
+        Points += time * amount;
+        PPS = amount;
+    }
+
+    private static double PointGain()
+    {
+        return Math.Max(Math.Log2(Points), 1);
+    }
+
+    private static bool CanGainPoints()
+    {
+        return true;
+    }
+}
