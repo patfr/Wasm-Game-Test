@@ -20,6 +20,9 @@ jobs:
       
     - name: Change base-tag in index.html from / to Wasm-Game-Test
       run: sed -i 's/<base href="\/" \/>/<base href="\/Wasm-Game-Test\/" \/>/g' release/wwwroot/index.html
+      
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
         
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
