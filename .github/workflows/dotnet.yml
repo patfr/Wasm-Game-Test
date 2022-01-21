@@ -17,6 +17,9 @@ jobs:
         
     - name: Publish .NET Core Project
       run: dotnet publish 'Idle game/Idle game.csproj' -c Release -o release --nologo
+      
+    - name: Change base-tag in index.html from / to Wasm-Game-Test
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Wasm-Game-Test\/" \/>/g' release/wwwroot/index.html
         
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
