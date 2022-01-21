@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Idle game.dll": "sha256-3RDSLq\/7jGxpH7G+nGn93kQaImGdySyHfEc\/bXgMyJ0=",
+      "Idle game.dll": "sha256-ajNLti7qGqg+ZJEj5cP1S74vi8cYgbIGJrZUs1cib6k=",
       "Microsoft.AspNetCore.Components.dll": "sha256-CRYpMgtXkSmN7gaLzldffr+11\/NNfQBGzYx6v0d0\/\/U=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-ayazMPuz17Uh6yyOaWTZwxfAFXN4V1Zh\/ma6C\/o9gKo=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-2fbR6RpUxEMnL89Bp4BedWtQJQRpzWAu87gh1UjPAWk=",
