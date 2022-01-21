@@ -11,7 +11,7 @@ namespace Idle_game.Pages
         public double Points = 0;
 
         private string Display => Shown ? "initial" : "none";
-        private PointDisplay? text;
+        private PointDisplay? Text;
 
         public void Update() => this.StateHasChanged();
 
@@ -19,13 +19,15 @@ namespace Idle_game.Pages
         {
             Points += Math.Max(Math.Log10(Data.Points), 1) * time;
 
-            if (text != null)
+            if (Text != null)
             {
-                text.points = Points;
-                text.Update();
+                Text.points = Points;
+                Text.Update();
             }
     
             Update();
         }
+
+        public void SetShown(bool state) => Shown = state;
     }
 }

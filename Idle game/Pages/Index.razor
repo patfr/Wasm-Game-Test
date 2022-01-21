@@ -10,8 +10,8 @@
 </div>
 
 <div id="layers">
-    <Layer name="Data" shown=true @ref="layers[layerNames[0]]" />
-    <Layer name="Context" @ref="layers[layerNames[1]]" />
+    <Layer Name="Data" Shown=true @ref="layers[layerNames[0]]" />
+    <Layer Name="Context" @ref="layers[layerNames[1]]" />
 </div>
 
 @code {
@@ -57,12 +57,12 @@
         {
             if(string.Equals(l.Value.Name, layer))
             {
-                l.Value.Shown = true;
+                l.Value.SetShown(true);
                 l.Value.Update();
             }
             else
             {
-                l.Value.Shown = false;
+                l.Value.SetShown(false);
                 l.Value.Update();
             }
         }
