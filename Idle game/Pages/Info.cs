@@ -5,7 +5,6 @@
         public string InternalName { get; set; } = "Null";
         public string ExternalName { get; set; } = "Null";
         public string LayerColor { get; set; } = "#ffffff";
-        public string LayerTheme { get; set; } = "#ffffff";
 
         public bool LayerShown { get; set; } = false;
 
@@ -14,6 +13,7 @@
         public DisplayPointsData DisplayPointsData { get; set; } = new DisplayPointsData();
         public TabData LayerTabData { get; set; } = new TabData();
         public PrestigeButtonData PrestigeData { get; set; } = new PrestigeButtonData();
+        public UpgradeData[] UpgradesData { get; set; } = Array.Empty<UpgradeData>();
     }
 
     public class DisplayPointsData
@@ -40,5 +40,26 @@
     public class PrestigeButtonData
     {
         public string DisplayColor { get; set; } = "#ffffff";
+    }
+
+    public class UpgradeData
+    {
+        public string Title { get; set; } = "Null";
+        public string Description { get; set; } = "Null";
+        public string ColorLocked { get; set; } = "#ffffff";
+        public string ColorCan { get; set; } = "#ffffff";
+        public string Color { get; set; } = "#ffffff";
+        public string TextColor { get; set; } = "#ffffff";
+        public string LockedText { get; set; } = "#ffffff";
+        public string CanText { get; set; } = "#ffffff";
+        public string CostText { get; set; } = "Null";
+
+        public bool Locked { get; set; } = false;
+        public bool Shown { get; set; } = true;
+
+        public NumberClass Cost { get; set; } = new NumberClass(0);
+
+        public Func<NumberClass, bool> CanBuy = n => n >= Data.Points;
+        public Func<NumberClass> Buy = () => Data.Points;
     }
 }

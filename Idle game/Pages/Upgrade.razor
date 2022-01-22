@@ -1,0 +1,20 @@
+﻿@if (Info.Shown) {
+    <div class="upgrade @(Animation)" style="background: @BackgroundColor">
+        <div class="container">
+            <div class="text" style="color: @TextColor; font-size: 12px"><b>@Info.Title</b></div>
+            <div class="text" style="color: @TextColor">@Info.Description</div>
+            @if (Info.Locked)
+            {
+                <div class="text" style="color: @TextColor">
+                    <b><i>Locked</i></b>
+                </div>
+            }
+            else
+            {
+                <div class="text" style="color: @TextColor">
+                    Costs: @Data.Format(Info.Cost) @Info.CostText
+                </div>
+            }
+        </div>
+    </div>
+}

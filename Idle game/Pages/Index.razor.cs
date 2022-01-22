@@ -46,6 +46,11 @@ namespace Idle_game.Pages
             for (int i = 0; i < Layers.Length; i++)
             {
                 Layers[i].Tick(t);
+                
+                for (int j = 0; j < Layers[i].Upgrades.Length; j++)
+                {
+                    Layers[i].Upgrades[j].Update();
+                }
             }
         }
 
@@ -60,7 +65,7 @@ namespace Idle_game.Pages
             }, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(50));
         }
 
-        private static Layer[] Layers = new Layer[Game.LayersData.Length];
+        public static Layer[] Layers = new Layer[Game.LayersData.Length];
 
         public static long DeltaTime => GetTimeMs() - LastRun;
 

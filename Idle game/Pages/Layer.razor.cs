@@ -10,6 +10,8 @@ namespace Idle_game.Pages
 
         private PointDisplay? Display;
 
+        public Upgrade[] Upgrades = new Upgrade[1];
+
         public void Update() => StateHasChanged();
 
         public void Tick(double t)

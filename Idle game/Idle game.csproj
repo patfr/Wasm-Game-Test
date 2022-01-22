@@ -12,6 +12,7 @@
     <None Remove="Pages\PointDisplay.razor.css" />
     <None Remove="Pages\PrestigeButton.razor.css" />
     <None Remove="Pages\Tab.razor.css" />
+    <None Remove="Pages\Upgrade.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
     <Content Include="Pages\PointDisplay.razor.css" />
     <Content Include="Pages\PrestigeButton.razor.css" />
     <Content Include="Pages\Tab.razor.css" />
+    <Content Include="Pages\Upgrade.razor.css" />
   </ItemGroup>
 
   <ItemGroup>

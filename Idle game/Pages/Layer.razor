@@ -4,5 +4,13 @@
         <PointDisplay Info=@Info.DisplayPointsData @ref="Display" />
         <br />
         <PrestigeButton Info=@Info.PrestigeData />
+        <div class="blank" style="height: 50px" />
+        <div class="upgrades">
+            @for (int i = 0; i < Info.UpgradesData.Length; i++)
+            {
+                int tmp = i;
+                <Upgrade Info=@Info.UpgradesData[tmp] @ref=Upgrades[tmp] />
+            }
+        </div>
     </div>
 }

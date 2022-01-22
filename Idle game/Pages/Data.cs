@@ -3,7 +3,7 @@
     public class Data
     {
         public static string Title = "Incremental";
-        public static string Version = "0.01 Beta";
+        public static string Version = "0.01b Beta";
 
         public static NumberClass Points = 0;
         public static NumberClass PPS = 0;

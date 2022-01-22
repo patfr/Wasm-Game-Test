@@ -12,8 +12,8 @@ namespace Idle_game.Pages
 
         public void SetPoints(NumberClass? p = null, NumberClass? pps = null)
         {
-            if (p != (object?)null) Info.DisplayPoints = p;
-            if (pps != (object?)null) Info.DisplayPps = pps;
+            if (p is not null) Info.DisplayPoints = p;
+            if (pps is not null) Info.DisplayPps = pps;
         }
     }
 }
