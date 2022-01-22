@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Idle game.dll": "sha256-awoan7TgUS1CHH3iuFBgDmZg2Q0D2cdS2khJNQjR9B0=",
+      "Idle game.dll": "sha256-vK4hwQcRNZMaU+YmbtVDriQGIBMCNCrXNWkfMZw12zc=",
       "Microsoft.AspNetCore.Components.dll": "sha256-CRYpMgtXkSmN7gaLzldffr+11\/NNfQBGzYx6v0d0\/\/U=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-ayazMPuz17Uh6yyOaWTZwxfAFXN4V1Zh\/ma6C\/o9gKo=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-2fbR6RpUxEMnL89Bp4BedWtQJQRpzWAu87gh1UjPAWk=",
@@ -34,7 +34,7 @@
       "System.Private.Runtime.InteropServices.JavaScript.dll": "sha256-qi77gYVxMlCsbJi31oZqGaIW077cYdFy3LFk+dt2z6k=",
       "System.Private.Uri.dll": "sha256-LwHecQtBtNw8eIBpUBg03RXEXenbeHT18f0iFhb8M6M=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-NJPcPizDV6A4CjOnszxYro9mJMWaHq2cGM2\/A0bAFNY=",
-      "System.Runtime.dll": "sha256-kNZpHMuLBY1vHilQ3nUWqGoMRo8s8\/ftyOLrOQgpLgA=",
+      "System.Runtime.dll": "sha256-J2q0D+do2CDeUSGhL2oUuvvIBjn3sDv918XLmLeWbR8=",
       "System.Text.Encodings.Web.dll": "sha256-gUV2fOrOUGrNK6Oj1AxlN44sKTuN4hYA1DxX8xuRU2c=",
       "System.Text.Json.dll": "sha256-JqsfW50WFKqrjpqWUq9Ium5diNkoTKkumNONBkI3sik=",
       "System.Text.RegularExpressions.dll": "sha256-TMGW\/dKTfkWUdPBSFC4fDo+\/BU9WxSF7t\/7weH3Fb1Y="
