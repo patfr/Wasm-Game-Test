@@ -12,6 +12,23 @@
     height: fit-content;
     margin-top: 50px;
 }
+
+#version[b-s7l3f1t67z] {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    color: white;
+    text-shadow: 0 0 10px white;
+    padding: 5px;
+}
+
+#disclaimer[b-s7l3f1t67z] {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: white;
+    padding: 5px;
+}
 /* /Pages/Layer.razor.rz.scp.css */
 .layer[b-94y1376qvt] {
     position: relative;
