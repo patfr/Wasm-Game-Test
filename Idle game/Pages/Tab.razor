@@ -1,9 +1,4 @@
-﻿<button class="tab" style="border-color: @color" @onclick="Clicked">@text</button>
-
-@code {
-    [Parameter] public string text { get; set; } = "Null";
-    [Parameter] public string layer { get; set; } = "Null";
-    [Parameter] public string color { get; set; } = "#ffffff";
-
-    private void Clicked() => Index.OnTabClick(layer);
+﻿@if (Info.TabShown)
+{
+    <button class="tab" style="border-color: @Info.DisplayColor" @onclick="Clicked">@Info.ExternalName</button>
 }

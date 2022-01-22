@@ -4,30 +4,27 @@ namespace Idle_game.Pages
 {
     public partial class Layer : ComponentBase
     {
-        [Parameter] public string Name { get; set; } = "Null";
-        [Parameter] public bool Shown { get; set; } = false;
-        [Parameter] public string Color { get; set; } = "#ffffff";
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        [Parameter] public LayerData Info { get; set; }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
-        public double Points = 0;
+        private PointDisplay? Display;
 
-        private string Display => Shown ? "initial" : "none";
-        private PointDisplay? Text;
+        public void Update() => StateHasChanged();
 
-        public void Update() => this.StateHasChanged();
-
-        public void Tick(double time)
+        public void Tick(double t)
         {
-            Points += Math.Max(Math.Log10(Data.Points), 1) * time;
+            Info.LayerPoints += Data.Points.Log10().Max(1) * t;
 
-            if (Text != null)
+            if (Display != null)
             {
-                Text.points = Points;
-                Text.Update();
+                Display.SetPoints(Info.LayerPoints);
+                Display.Update();
             }
     
             Update();
         }
 
-        public void SetShown(bool state) => Shown = state;
+        public void SetShown(bool state) => Info.LayerShown = state;
     }
 }

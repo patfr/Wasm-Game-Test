@@ -11,3 +11,20 @@
     height: fit-content;
     margin-top: 50px;
 }
+
+#version {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    color: white;
+    text-shadow: 0 0 10px white;
+    padding: 5px;
+}
+
+#disclaimer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: white;
+    padding: 5px;
+}

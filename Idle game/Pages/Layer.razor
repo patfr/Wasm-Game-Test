@@ -1,5 +1,8 @@
-﻿<div class="layer" style="display: @Display">
-    <PointDisplay color="@Color" name="@Name" showPPS=false @ref="Text" />
-    <br />
-    <PrestigeButton color=@Color />
-</div>
+﻿@if (Info.LayerShown)
+{
+    <div class="layer">
+        <PointDisplay Info=@Info.DisplayPointsData @ref="Display" />
+        <br />
+        <PrestigeButton Info=@Info.PrestigeData />
+    </div>
+}

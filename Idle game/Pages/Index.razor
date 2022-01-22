@@ -1,79 +1,24 @@
 ﻿@page "/"
 
-<PageTitle>C# Test</PageTitle>
+<PageTitle>@Data.Title</PageTitle>
 
-<PointDisplay color="#ffffff" name="Points" @ref="Points" />
+<PointDisplay Info=@Game.MainPoints @ref="Display" />
+
+<div id="disclaimer">Disclaimer: This is a test so expect little gameplay & a lot of bugs</div>
+<div id="version">v@(Data.Version)</div>
 
 <div id="tabs">
-    <Tab text="Data" layer="Data" />
-    <Tab text="Context" layer="Context" />
+    @for (int i = 0; i < Game.LayersData.Length; i++)
+    {
+        int tmp = i;
+        <Tab Info=@Game.LayersData[tmp].LayerTabData />
+    }
 </div>
 
 <div id="layers">
-    <Layer Name="Data" Shown=true @ref="layers[layerNames[0]]" />
-    <Layer Name="Context" @ref="layers[layerNames[1]]" />
+    @for (int i = 0; i < Game.LayersData.Length; i++) 
+    {
+        int tmp = i;
+        <Layer Info=@Game.LayersData[tmp] @ref="Layers[tmp]" />
+    }
 </div>
-
-@code {
-    private static PointDisplay? Points;
-    private bool Initialized = false;
-
-    private static void Run(long time)
-    {
-        double t = time / 1000d;
-
-        Data.GainPoints(t);
-
-        if (Points != null)
-        {
-            Points.points = Data.Points;
-            Points.pps = Data.PPS;
-            Points.Update();
-        }
-
-        foreach (KeyValuePair<string, Layer> l in layers)
-        {
-            l.Value.Tick(t);
-        }
-    }
-
-    protected override void OnInitialized()
-    {
-        LastRun = GetTimeMs();
-
-        Timer = new System.Threading.Timer((e) =>
-        {
-            Run(DeltaTime);
-            LastRun = GetTimeMs();
-        }, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(15));
-        Initialized = true;
-    }
-
-    private static Dictionary<string, Layer> layers = new Dictionary<string, Layer>();
-
-    public static void OnTabClick(string layer)
-    {
-        foreach (KeyValuePair<string, Layer> l in layers)
-        {
-            if(string.Equals(l.Value.Name, layer))
-            {
-                l.Value.SetShown(true);
-                l.Value.Update();
-            }
-            else
-            {
-                l.Value.SetShown(false);
-                l.Value.Update();
-            }
-        }
-    }
-
-    public static long DeltaTime => GetTimeMs() - LastRun;
-
-    private static long GetTimeMs() => DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-    private static long LastRun { get; set; }
-
-    private static System.Threading.Timer? Timer;
-
-    private static string[] layerNames = new string[] { "Data", "Contex" };
-}
