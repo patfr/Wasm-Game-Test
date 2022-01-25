@@ -1,3 +1,4 @@
+/* /Pages/Debug.razor.rz.scp.css */
 /* /Pages/Index.razor.rz.scp.css */
 #tabs[b-s7l3f1t67z] {
     width: 50%;
@@ -14,12 +15,83 @@
 }
 
 #version[b-s7l3f1t67z] {
-    position: fixed;
-    top: 0px;
-    right: 0px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    text-align: right;
     color: white;
     text-shadow: 0 0 10px white;
-    padding: 5px;
+    cursor: pointer;
+}
+
+#version:hover[b-s7l3f1t67z] {
+    transform: scale(1.1, 1.1);
+    right: 8px;
+}
+
+#credit[b-s7l3f1t67z] {
+    position: absolute;
+    top: 32px;
+    right: 4px;
+    text-align: right;
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+#credit:hover[b-s7l3f1t67z] {
+    transform: scale(1.1, 1.1);
+    right: 8px;
+}
+
+#logs[b-s7l3f1t67z] {
+    background: #0f0f0f;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#credits[b-s7l3f1t67z] {
+    background: #0f0f0f;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#change[b-s7l3f1t67z] {
+    position: relative;
+    margin-top: 50px;
+}
+
+#cred[b-s7l3f1t67z] {
+    position: relative;
+    margin-top: 50px;
+}
+
+.version[b-s7l3f1t67z] {
+    color: red;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#back[b-s7l3f1t67z] {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 36px;
+    border: 2px solid yellow;
+    background: transparent;
+    border-radius: 10px;
+    color: white;
+    padding: 0 20px 0 20px;
+}
+
+#back:hover[b-s7l3f1t67z] {
+    transform: scale(1.1, 1.1);
 }
 
 #disclaimer[b-s7l3f1t67z] {
@@ -48,19 +120,10 @@
 }
 /* /Pages/PointDisplay.razor.rz.scp.css */
 .pointsDisplay[b-jxihkmj9he] {
-    width: 100%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.pointsAmount[b-jxihkmj9he] {
-    font-family: "Lucida Console", "Courier New", monospace;
-    display: inline
-}
-
-.pointsText[b-jxihkmj9he] {
-    margin: auto;
+    padding-bottom: 7px;
+    width: 90%;
+    position: relative;
+    z-index: 1000;
 }
 /* /Pages/PrestigeButton.razor.rz.scp.css */
 .prestigeButton[b-id3gum0rla] {
