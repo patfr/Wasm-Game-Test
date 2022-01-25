@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\Debug.razor.css" />
     <None Remove="Pages\Index.razor.css" />
     <None Remove="Pages\Layer.razor.css" />
     <None Remove="Pages\PointDisplay.razor.css" />
@@ -16,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Pages\Debug.razor.css" />
     <Content Include="Pages\Index.razor.css" />
     <Content Include="Pages\Layer.razor.css" />
     <Content Include="Pages\PointDisplay.razor.css" />

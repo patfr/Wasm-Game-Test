@@ -1,13 +1,14 @@
 ﻿@if (Info.DisplayShown)
 {
-    <div class="pointsDisplay">
-        <span class="pointsText" style="color: @Info.DisplayColor">You have</span>
-        <h2 class="pointsText pointsAmount" style="text-shadow: 0 0 10px @Info.DisplayColor; color: @Info.DisplayColor">@Data.Format(Info.DisplayPoints)</h2>
-        <span class="pointsText" style="color: @Info.DisplayColor">@Info.ExternalName</span>
+    <div class="pointsDisplay overlay">
+        <br />
+        <span class="overlay" style="color: @Info.DisplayColor">You have</span>
+        <h2 class="overlay" style="text-shadow: 0 0 10px @Info.DisplayColor; color: @Info.DisplayColor">@Data.Format(Info.DisplayPoints)</h2>
+        <span class="overlay" style="color: @Info.DisplayColor">@Info.ExternalName</span>
         <br />
         @if (Info.PpsShown)
         {
-            <span class="pointsText" style="color: @Info.DisplayColor">(@Data.Format(Info.DisplayPps)/sec)</span>
+            <span class="overlay" style="color: @Info.DisplayColor">(@Data.Format(Info.DisplayPps)/sec)</span>
         }
     </div>
 }

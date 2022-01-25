@@ -3,7 +3,54 @@
     public class Data
     {
         public static string Title = "Incremental";
-        public static string Version = "0.01b Beta";
+        public static string Version = "0.01c Beta";
+
+        public static VersionData[] ChangeLog = new VersionData[]
+        {
+            new()
+            {
+                Name = "Styling update",
+                Version = "0.01c",
+                Description = new string[]
+                {
+                    "- Added changelog.", "- Added credits.", "- Changed styling on some elements.", "(This is part 1 of the styling update)"
+                },
+            },
+            new()
+            {
+                Name = "Framework",
+                Version = "0.01b",
+                Description = new string[]
+                {
+                    "- Rewritten the framework.", "- Created an unfinished upgrade framework."
+                },
+            },
+            new()
+            {
+                Name = "Github",
+                Version = "0.01",
+                Description = new string[] 
+                { 
+                    "- Released to github pages.", "- Created a basic framework." 
+                },
+            }
+        };
+
+        public static CreditData[] Credits = new CreditData[]
+        {
+            new()
+            {
+                Name = "Hmm#8047",
+                Color = "#00ffff",
+                Description = "Game",
+            },
+            new()
+            {
+                Name = "SW_CreeperKing#5787",
+                Color = "#99ebf7",
+                Description = "Number library",
+            }
+        };
 
         public static NumberClass Points = 0;
         public static NumberClass PPS = 0;

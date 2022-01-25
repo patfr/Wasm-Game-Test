@@ -1,5 +1,20 @@
 ﻿namespace Idle_game.Pages
 {
+    public class VersionData
+    {
+        public string Name { get; set; } = "Null";
+        public string Version { get; set; } = "1.0";
+        public string UpdateState { get; set; } = "Beta";
+        public string[] Description { get; set; } = new string[] { "Null" };
+    }
+
+    public class CreditData
+    {
+        public string Name { get; set; } = "Null";
+        public string Color { get; set; } = "#ffffff";
+        public string Description { get; set; } = "Null";
+    }
+
     public class LayerData
     {
         public string InternalName { get; set; } = "Null";

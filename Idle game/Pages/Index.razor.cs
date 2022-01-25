@@ -73,5 +73,8 @@ namespace Idle_game.Pages
         private static long LastRun { get; set; }
 
         private static Timer? Timer;
+
+        private bool LogsShown { get; set; } = false;
+        private bool CreditShown { get; set; } = false;
     }
 }

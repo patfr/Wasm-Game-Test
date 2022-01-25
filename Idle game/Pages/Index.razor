@@ -5,7 +5,47 @@
 <PointDisplay Info=@Game.MainPoints @ref="Display" />
 
 <div id="disclaimer">Disclaimer: This is a test so expect little gameplay & a lot of bugs</div>
-<div id="version">v@(Data.Version)</div>
+<div id="version" @onclick="() => LogsShown = !LogsShown">v@(Data.Version)</div>
+<div id="credit" @onclick="() => CreditShown = !CreditShown">Credits</div>
+
+@if (LogsShown)
+{
+    <div id="logs" class="overlay">
+        <button id="back" @onclick="() => LogsShown = !LogsShown" class="overlay">Back</button>
+        <div id="change">
+            <h1>Changelog:</h1><br /><br />
+            @for (int i = 0; i < Data.ChangeLog.Length; i++)
+            {
+                int tmp = i;
+                <h3 class="version">v@($"{Data.ChangeLog[tmp].Version} {Data.ChangeLog[tmp].UpdateState} - {Data.ChangeLog[tmp].Name}")</h3>
+                @for (int j = 0; j < Data.ChangeLog[tmp].Description.Length; j++)
+                {
+                    int tmp2 = j;
+                    @(Data.ChangeLog[tmp].Description[tmp2])
+                    <br />
+                }
+                <br />
+            }
+        </div>
+    </div>
+}
+
+@if (CreditShown)
+{
+    <div id="credits" class="overlay">
+        <button id="back" @onclick="() => CreditShown = !CreditShown" class="overlay">Back</button>
+        <div id="cred">
+            <h1>Credits:</h1><br /><br />
+            @for (int i = 0; i < Data.Credits.Length; i++)
+            {
+                int tmp = i;
+                <h3 style="color: @Data.Credits[tmp].Color; margin-top: 0px; margin-bottom: 0px">@Data.Credits[tmp].Name </h3>
+                <h3 style="margin-top: 0px; margin-bottom: 0px">@Data.Credits[tmp].Description</h3>
+                <br />
+            }
+        </div>
+    </div>
+}
 
 <div id="tabs">
     @for (int i = 0; i < Game.LayersData.Length; i++)
